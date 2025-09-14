@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - E-commerce</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    img.rounded-lg.mb-4.w-full {
+        height: 250px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-indigo-600 shadow-md sticky top-0 z-50">
+    <nav class="container flex justify-between items-center py-6  px-4 ">
+      <a class="flex items-center gap-2" href="index.html"><img src="img/bijoy.png" class="w-9 rounded-full" alt=""><h1 class="text-[15px] font-semibold text-indigo-600 text-white">BijoyStore</h1></a>
+      <div class="flex">
+        <ul class="flex hidden md:flex gap-2 items-center text-gray-600 text-white">
+          <li><a href="#home" class="hover:text-indigo-300 pr-6">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-300 pr-6">About</a></li>
+          <li><a href="#products" class="hover:text-indigo-300 pr-6">Products</a></li>
+          <li><a href="#conact" class="hover:text-indigo-300 ">Contact</a></li>
+        </ul>
+        
+    <button id="navBtn" class="md:hidden p-2 rounded hover:bg-gray-500 text-white">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="md:hidden hidden border-t text-white">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#home" class="hover:text-indigo-300 pr-6">Home</a>
+        <a href="#about" class="hover:text-indigo-300 pr-6">About</a>
+        <a href="#products" class="hover:text-indigo-300 pr-6">Products</a>
+        <a href="#contact" class="hover:text-indigo-300 pr-6">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <script>
+  // Mobile nav toggle
+      document.getElementById('navBtn').addEventListener('click', ()=>{
+      document.getElementById('mobileNav').classList.toggle('hidden');
+      });
+  </script>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">Welcome to ShopEasy</h2>
+    <p class="text-lg mb-6">Your one-stop shop for trendy fashion & lifestyle products.</p>
+    <a href="#products" class="bg-white text-green-600 px-6 py-3 rounded-full font-semibold shadow-md">Shop Now</a>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Featured Products</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Product 1 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="img/t-shirt.jpeg" alt="Product 1" class="w-full h-[250px]">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Casual T-Shirt</h3>
+          <p class="text-gray-600 mb-2">Comfortable cotton t-shirt for everyday wear.</p>
+          <p class="font-bold text-green-600 mb-4">$19.99</p>
+          <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="img/Stylish.jpeg" alt="Product 2" class="w-full h-[250px]">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Stylish Sneakers</h3>
+          <p class="text-gray-600 mb-2">Trendy sneakers for a modern lifestyle.</p>
+          <p class="font-bold text-green-600 mb-4">$49.99</p>
+          <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="img/Smart.jpeg" alt="Product 3" class="w-full h-[250px]">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Smart Watch</h3>
+          <p class="text-gray-600 mb-2">Track your fitness and stay connected.</p>
+          <p class="font-bold text-green-600 mb-4">$89.99</p>
+          <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold">Add to Cart</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+ <!-- product -->
+
+  <div class="container mx-auto py-16 md:px-6">
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Our Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <!-- Loop 16 products -->
+        <!-- Product Item -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 1</h4>
+            <p class="text-gray-600 mb-4">$25.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 2</h4>
+            <p class="text-gray-600 mb-4">$30.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 3</h4>
+            <p class="text-gray-600 mb-4">$35.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 4</h4>
+            <p class="text-gray-600 mb-4">$40.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <!-- Duplicate and change product names/prices for more -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 5</h4>
+            <p class="text-gray-600 mb-4">$45.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 6</h4>
+            <p class="text-gray-600 mb-4">$50.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 7</h4>
+            <p class="text-gray-600 mb-4">$55.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 8</h4>
+            <p class="text-gray-600 mb-4">$60.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <!-- More products -->
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 9</h4>
+            <p class="text-gray-600 mb-4">$65.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 10</h4>
+            <p class="text-gray-600 mb-4">$70.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 11</h4>
+            <p class="text-gray-600 mb-4">$75.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+            <img src="img/bijoy.jpg" alt="Product" class="rounded-lg mb-4 w-full">
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Product 12</h4>
+            <p class="text-gray-600 mb-4">$80.00</p>
+            <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600 w-full">Add to Cart</button>
+        </div>
+
+        </div>
+    </section>
+  </div>
+
+
+
+
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-16 px-6">
+    <div class="container mx-auto text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">About ShopEasy</h2>
+      <p class="text-gray-700">
+        ShopEasy is a modern e-commerce platform offering top-quality fashion and lifestyle products. 
+        Our mission is to make shopping simple, affordable, and enjoyable for everyone.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded-lg" required>
+      <input type="email" placeholder="Your Email" class="w-full border px-4 py-2 rounded-lg" required>
+      <textarea placeholder="Your Message" class="w-full border px-4 py-2 rounded-lg" rows="5"></textarea>
+      <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 Bijoy-ShopEasy | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
